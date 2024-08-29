@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Visualización de coordenadas en AR con 8th Wall y A-Frame">
+    <title>Visualización de Coordenadas en AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-gps-camera@1.7.0/dist/aframe-gps-camera.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Entidad para mostrar el punto de interés -->
+        <a-entity gps-entity-place="latitude: 38.869689; longitude: -1.093659; altitude: 700">
+            <!-- Usamos un marcador simple con una imagen como textura -->
+            <a-image src="assets/pto.glb" width="2" height="2"></a-image>
+        </a-entity>
+
+        <!-- Cámara AR -->
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
+</body>
+</html>
